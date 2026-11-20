@@ -1,0 +1,113 @@
+{
+  "scope": "M1 source review; initial research universe uses URNM, URNJ and NUKZ. URA, HURA and NLR omitted from candidate discovery due to documented access limitations; URA remains the price benchmark.",
+  "terms_reference": "https://fred.stlouisfed.org/legal/",
+  "sources": [
+    {
+      "source_id": "URNM",
+      "source_url": "https://sprottetfs.com/urnm-sprott-uranium-miners-etf",
+      "retrieved_at_utc": "2026-11-20T20:05:32.169812+00:00",
+      "effective_date": "2026-11-19",
+      "available_at": null,
+      "snapshot_path": "data/raw/holdings/URNM_2026-11-19_20261120T200532184446Z.csv",
+      "sha256": "48b0a6e24eb79673f2e748948046f08efa16e4fb60ec1d2ac57b87ed677a3552",
+      "row_count": 26,
+      "weight_sum_pct": 100.0,
+      "frequency": "daily snapshot",
+      "units": "weight: percent; market value: provider dollar units",
+      "currency": null,
+      "review_status": "snapshot_collected_mapping_pending",
+      "redistribution_status": "not_cleared",
+      "terms_notes": "Sponsor page provides a CSV download and states all rights reserved. No redistribution license established; raw file stays local.",
+      "limitations": "Exchange, share class and security currency are not supplied as separate fields. Do not infer trading currency from market-value dollars. Unknown symbols and missing SEDOLs need review."
+    },
+    {
+      "source_id": "URNJ",
+      "source_url": "https://sprottetfs.com/urnj-sprott-junior-uranium-miners-etf",
+      "retrieved_at_utc": "2026-11-20T20:05:32.463457+00:00",
+      "effective_date": "2026-11-19",
+      "available_at": null,
+      "snapshot_path": "data/raw/holdings/URNJ_2026-11-19_20261120T200532472327Z.csv",
+      "sha256": "27b92569c0c9c7f7f6bab46337c325dadf4a3778d6d97f91715c0db062cc7ee9",
+      "row_count": 42,
+      "weight_sum_pct": 100.0,
+      "frequency": "daily snapshot",
+      "units": "weight: percent; market value: provider dollar units",
+      "currency": null,
+      "review_status": "snapshot_collected_mapping_pending",
+      "redistribution_status": "not_cleared",
+      "terms_notes": "Sponsor page provides a CSV download and states all rights reserved. No redistribution license established; raw file stays local.",
+      "limitations": "Exchange, share class and security currency are not supplied as separate fields. Do not infer trading currency from market-value dollars. Unknown symbols and missing SEDOLs need review."
+    },
+    {
+      "source_id": "URA",
+      "source_url": "https://www.globalxetfs.com/funds/ura",
+      "reviewed_at_utc": "2026-11-20T20:05:32.472716+00:00",
+      "review_status": "omitted_from_initial_discovery",
+      "review_notes": "Browser text shows dated holdings and CSV control; direct request returned HTTP 429. Do not retry aggressively. Initial discovery uses the other three accessible sponsors; omission is disclosed, not silently treated as an empty portfolio.",
+      "snapshot_path": null,
+      "redistribution_status": "not_cleared"
+    },
+    {
+      "source_id": "HURA",
+      "source_url": "https://www.globalx.ca/product/HURA",
+      "reviewed_at_utc": "2026-11-20T20:05:32.472726+00:00",
+      "review_status": "omitted_from_initial_discovery",
+      "review_notes": "Browser text exposes top ten holdings dated 2026-10-30, not a complete inventory. Direct request returned HTTP 403. Initial discovery uses the other three accessible sponsors; omission is disclosed, not silently treated as an empty portfolio.",
+      "snapshot_path": null,
+      "redistribution_status": "not_cleared"
+    },
+    {
+      "source_id": "NLR",
+      "source_url": "https://www.vaneck.com/us/en/investments/uranium-nuclear-energy-etf-nlr/holdings/",
+      "reviewed_at_utc": "2026-11-20T20:05:32.472730+00:00",
+      "review_status": "omitted_from_initial_discovery",
+      "review_notes": "Browser text exposes daily holdings dated 2026-11-19 and XLS control. Direct request entered a redirect loop. Initial discovery uses the other three accessible sponsors; omission is disclosed, not silently treated as an empty portfolio.",
+      "snapshot_path": null,
+      "redistribution_status": "not_cleared"
+    },
+    {
+      "source_id": "NUKZ",
+      "source_url": "https://www.rangeetfs.com/nukz",
+      "reviewed_at_utc": "2026-11-20T20:05:32.472736+00:00",
+      "review_status": "snapshot_collected_mapping_pending",
+      "review_notes": "Full 53-row holdings recovered from sponsor HTML __NUXT_DATA__ payload; weights sum to 100.02% due to rounding. Includes cash. Local CSV is an extraction of the payload, not a sponsor CSV download.",
+      "snapshot_path": "data/raw/holdings/NUKZ_2026-11-19.csv",
+      "redistribution_status": "not_cleared",
+      "row_count": 53,
+      "sha256": "cebd7c6b769ae4b716be1510c1a311717f08e69e3ea20d47082a81750b3cd56b",
+      "effective_date": "2026-11-19",
+      "retrieved_at_utc": "2026-11-20T20:19:53.987584+00:00",
+      "page_snapshot_path": "data/raw/holdings/NUKZ_2026-11-19_page.html",
+      "page_sha256": "f18d10d342cb3509f5957b4cfc8bbc3cdb36528705c74c21e24f1b410e8b07dd"
+    },
+    {
+      "source_id": "PURANUSDM",
+      "source_url": "https://fred.stlouisfed.org/series/PURANUSDM",
+      "reviewed_at_utc": "2026-11-20T20:05:32.472739+00:00",
+      "review_status": "acquired_local_research",
+      "review_notes": "Monthly nominal USD per pound, period-average benchmark from IMF via FRED. FRED flags IMF copyright. IMF terms endpoint returned 403; public redistribution is not cleared. Historical availability/vintages require review.",
+      "snapshot_path": "data/raw/market/2010-01-01_2026-11-20/macro.csv",
+      "redistribution_status": "not_cleared",
+      "retrieved_at_utc": "2026-11-20T20:54:35.079455+00:00"
+    },
+    {
+      "source_id": "CPIAUCNS",
+      "source_url": "https://fred.stlouisfed.org/series/CPIAUCNS",
+      "reviewed_at_utc": "2026-11-20T20:05:32.472741+00:00",
+      "review_status": "acquired_local_research",
+      "review_notes": "Proposed inflation deflator: BLS CPI-U all items, US city average, monthly, not seasonally adjusted, index 1982-84=100. FRED tags public domain with citation requested. Record release dates; observation month is not availability date.",
+      "snapshot_path": "data/raw/market/2010-01-01_2026-11-20/macro.csv",
+      "redistribution_status": "public_domain_citation_requested",
+      "retrieved_at_utc": "2026-11-20T20:54:35.079455+00:00"
+    },
+    {
+      "source_id": "EQUITY_PRICES",
+      "source_url": "https://ranaroussi.github.io/yfinance/",
+      "reviewed_at_utc": "2026-11-20T20:05:32.472743+00:00",
+      "review_status": "selected_and_acquired",
+      "review_notes": "Yahoo via yfinance selected for local personal educational use; actual daily adjusted OHLCV acquired and USD verified for all 19 series. Alpha Vantage documentation was reviewed as an alternative, not used.",
+      "snapshot_path": "data/raw/market/2010-01-01_2026-11-20/prices.csv",
+      "redistribution_status": "not_cleared"
+    }
+  ]
+}

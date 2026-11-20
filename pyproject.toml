@@ -1,0 +1,33 @@
+[project]
+name = "202611-final-project"
+version = "0.1.0"
+description = "Reproducible uranium equity signals and historical investment research"
+readme = "README.md"
+authors = [
+    { name = "Adam-CQ", email = "a.wojciechowski.cq@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.2,<4",
+    "numpy>=2,<3",
+    "scikit-learn>=1.5,<2",
+    "matplotlib>=3.9,<4",
+    "PyYAML>=6,<7",
+    "yfinance>=0.2.54,<2",
+]
+
+[dependency-groups]
+dev = ["jupyter>=1,<2", "nbclient>=0.10,<1", "pytest>=8,<10"]
+
+[project.scripts]
+uranium-signals = "uranium_signals.run:main"
+
+[tool.uv.build-backend]
+module-name = "uranium_signals"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"

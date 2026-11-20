@@ -1,0 +1,19 @@
+name: Manual research validation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run pytest -q
+      - run: uv run python -m uranium_signals.run --config config/project.yaml
+      # Market inputs and derived reports remain private/local to this runner.
+      # No artifacts are uploaded and no recurring schedule is activated.

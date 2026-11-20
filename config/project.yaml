@@ -1,0 +1,23 @@
+# Paths are relative to this file's parent project directory.
+start: '2010-01-01'
+end: '2026-11-20'  # exclusive; explicit date makes research runs repeatable
+universe: data/reference/universe.csv
+benchmark: URA
+broad_benchmark: SPY
+optional_benchmarks: [URNM]
+currency: USD
+min_history_sessions: 252
+min_median_dollar_volume: 1000000
+min_price: 1.0
+max_staleness_days: 7
+macro_lag_days: 60  # availability proxy, not verified historical release dates
+validation_start: '2016-01-01'
+holdout_start: '2024-01-01'
+min_train_months: 36
+top_n: 3
+probability_threshold: 0.5
+transaction_cost_bps: 10
+risk_free_annual: 0.0
+basket: [CCJ, DNN, UEC, UUUU, URG, NXE]
+basket_rebalance: annual
+seed: 42
